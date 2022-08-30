@@ -1,0 +1,2 @@
+# dropoutRatePrediction-webapp
+This projects gives school dropout rate according to their various attribute rate like no. of school corresponding to have clean water drinking facility, rate of school teacher facility etc . We had make a webapp  using flask for our dropout rate prediction system. Various correlaion technique we have use for the maharashtra school dropout rate dataset with independent column as various major attribute which can be responsible for dropout of student.
