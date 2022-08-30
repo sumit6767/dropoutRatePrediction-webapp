@@ -1,0 +1,59 @@
+{% extends 'homeheader.html'%}
+{% block content %}
+
+<section class="w3l-contacts-12" id="contact">
+	<div class="container py-5">
+		<div class="contacts12-main py-md-3">
+			<div class="header-section text-center">
+				<h3 class="mb-md-5 mb-4">Predicting Student Dropout Rate.
+			</div>
+			<form action="/predict" method="post" class="">
+				<div class="main-input">
+					<input type="text"  placeholder="Percentage of Schools not Implemented Continuous and Comprehensive Evaluation (CCE) Process" class="contact-input" required="" name="completeprocess" />
+                    <input type="text"  placeholder="Percentage of Schools which is not Approachable  not All-Weather Roads by Management" class="contact-input" required="" name="weatherroads" />
+                   
+					<input type="text"  placeholder="Percentage of  functionally Minority Managed Schools by Management" class="contact-input" required="" name="Minority"/>
+					
+                    <input type="text"  placeholder="Percentage of Schools having teacher trained in use of computer and teaching through computer" class="contact-input" required="" name="teachertrain" />
+					<input type="text"  placeholder="Percentage of Special Schools for CWSN by School Management" class="contact-input" name="schoolmanage"/>
+                    <input type="text"  placeholder="Percentage of students not enrolled by grade and Medium of Instruction" class="contact-input" required="" name="mediumofinstr" />
+                   
+					<input type="text"  placeholder="Gender Parity Index" class="contact-input" required="" name="gp"/>
+					
+                    <input type="text"  placeholder="Percentage of Schools having functional Electricity Connection" class="contact-input" required="" name="Electricity_Connection" />
+					<input type="text"  placeholder="Percentage of Schools not having Playground" class="contact-input" name="not_having_Playground"/>
+                    <input type="text"  placeholder="Percentage of Schools not having Library" class="contact-input" required="" name="not_having_Library" />
+                    <!-- <input type="text" name="w3lName" placeholder="Enter your Phone Number" class="contact-input" required="" name="pno" /> -->
+					<input type="text"  placeholder="Percentage of Schools not having Furniture" class="contact-input" required="" name="not_having_Furniture"/>
+					
+                    <input type="text"  placeholder="Percentage of Schools not having Functional Boys Toilet" class="contact-input" required="" name="Boys_Toilet" />
+					<input type="text"  placeholder="Percentage of Schools not having Functional Girls Toilet" class="contact-input" name="Girls_Toilet"/>
+                    <input type="text"  placeholder="Percentage of Schools do not having Drinking Water Facility" class="contact-input" required="" name="Drinking_Water_Facility" />
+					<input type="text"  placeholder="Percentage of Schools do not having Medical Checkup Facility" class="contact-input" name="Medical_Checkup_Facility"/>
+                    <input type="text"  placeholder="Percentage of Schools do not having Internet Facility" class="contact-input" required="" name="Internet_Facility" />
+                    <!-- <input type="text" name="w3lName" placeholder="Enter your Phone Number" class="contact-input" required="" name="pno" /> -->
+					<input type="text"  placeholder="Percentage of Schools do not having Computer Available" class="contact-input" required="" name="Computer_Available"/>
+					
+                    <input type="text"  placeholder="Pupil teacher ratio" class="contact-input" required="" name="Pupil_teacher" />
+					<input type="text"  placeholder="Percentage of Teacher having Academic Qualification, Professional Qualification, Classes Taugh" class="contact-input" name="Professional_Qualification"/>
+					<!-- <textarea class="contact-textarea contact-input" name="w3lMessage" placeholder="Enter your message" required=""></textarea> -->
+				</div>
+				<div class="text-right">
+					<button class="btn-secondary btn theme-button">Predict</button>
+				</div>
+
+			</form>
+            <br>
+            <br>
+            {% for message in get_flashed_messages() %}
+            <div class="alert alert-success" role="alert">
+                <div class="flash contact-input">{{ message }}</div>
+              </div>
+            {% endfor %}
+			<div style="margin-left: -330px;">
+				<img src="{{imagepath}}">
+			</div>
+		</div>
+	</div>
+
+{% endblock %}
