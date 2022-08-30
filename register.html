@@ -1,0 +1,28 @@
+{% extends 'header.html'%}
+{% block content %}
+
+<section class="w3l-contacts-12" id="contact">
+	<div class="container py-5">
+		<div class="contacts12-main py-md-3">
+			<div class="header-section text-center">
+				<h3 class="mb-md-5 mb-4">Register Here.
+			</div>
+			<form action="/register" method="post" class="">
+				<div class="main-input">
+					<input type="text"  placeholder="Enter your name" class="contact-input" required="" name="Name" />
+                    <input type="text"  placeholder="Enter your Address" class="contact-input" required="" name="add" />
+                    <!-- <input type="text" name="w3lName" placeholder="Enter your Phone Number" class="contact-input" required="" name="pno" /> -->
+					<input type="email"  placeholder="Enter your mail" class="contact-input" required="" name="email"/>
+					
+                    <input type="password"  placeholder="Enter your Password" class="contact-input" required="" name="pass" />
+					<input type="password"  placeholder="Enter your Password Again" class="contact-input" name="pass1"/>
+					<!-- <textarea class="contact-textarea contact-input" name="w3lMessage" placeholder="Enter your message" required=""></textarea> -->
+				</div>
+				<div class="text-right">
+					<button class="btn-secondary btn theme-button">Submit</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+{% endblock %}
